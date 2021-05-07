@@ -8,6 +8,11 @@
     to {transform: rotate(360deg);}
 }
 
+@keyframes progress {
+    from {width: 1%;}
+    to {width: 100%;}
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -36,7 +41,6 @@ img {
     margin: 0px 30px;
 }
 
-
 input:focus {
     outline: none;
 }
@@ -45,25 +49,24 @@ select:focus {
     outline: none;
 }
 
-.container {
-    max-width: 70%;
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 70%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.float {
-    float: left;
-}
-
 .personal-details {
     width: 40%;
     height: auto;
-    margin: 0px 5%;
     padding: 20px 20px 15px 20px;
     border: 1px solid white;
     border-radius: 5px;
     font-size: 12px;
+    margin-right: 20px;
 }
 
 .title {
@@ -86,11 +89,11 @@ input.inputs, select.inputs {
 .character {
     width: 40%;
     height: auto;
-    margin-top: 20px;
 }
 
 .character-header {
     width: 100%;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -101,10 +104,43 @@ input.inputs, select.inputs {
 .character-image {
     border: 1px solid white;
     border-radius: 50%;
-    margin-left: 15%;
 }
 
 .dice-image {
     margin-left: 15%;
     animation: rollDice 3s;
+}
+
+#life, #sanity, #occultism {
+    width: 100%;
+    background-color: gray;
+    border: 1px solid rgb(58, 57, 57);
+    border-radius: 7px;
+}
+
+#actual-life {
+    width: 1%;
+    height: 20px;
+    background-color: rgb(151, 17, 17);
+    animation: progress 3s;
+    border: 1px solid transparent;
+    border-radius: 7px;
+}
+
+#actual-sanity {
+    width: 1%;
+    height: 20px;
+    background-color: rgb(8, 8, 204);
+    animation: progress 3s;
+    border: 1px solid transparent;
+    border-radius: 7px;
+}
+
+#actual-occultism {
+    width: 1%;
+    height: 20px;
+    background-color: rgb(65, 8, 65);
+    animation: progress 3s;
+    border: 1px solid transparent;
+    border-radius: 7px;
 }

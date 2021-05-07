@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Perfil de Investigador</h1>
-    <div class="container">
-        <div class="personal-details float">
+    <div class="flex-container">
+        <div class="personal-details">
             <h2 class="title">DETALHES PESSOAIS</h2>
             <div class="inputs">
                 <h3>Nome</h3>
@@ -32,10 +32,25 @@
                 <input class ="inputs" type="text" name="" value="São Paulo">
             </div>
         </div>
-        <div class="character float">
+        <div class="character">
             <div class="character-header">
                 <img class="character-image" src="images/icaro.png" style="width: 30%; height: 30%;">
                 <img class="dice-image" src="images/dice.png" style="width: 20%; height: 20%;">
+            </div>
+
+            <div class="bars">
+                <h3>Vida</h3>
+                <div id="life">
+                    <div id="actual-life"></div>
+                </div>
+                <h3>Sanidade</h3>
+                <div id="sanity">
+                    <div id="actual-sanity"></div>
+                </div>
+                <h3>Ocultismo</h3>
+                <div id="occultism">
+                    <div id="actual-occultism"></div>
+                </div>
             </div>
         </div>
     </div>
