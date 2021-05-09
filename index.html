@@ -13,13 +13,13 @@
             <h2 class="title">DETALHES PESSOAIS</h2>
             <div class="inputs">
                 <h3>Nome</h3>
-                <input class ="inputs" type="text" name="name" value="Ícaro">
+                <input class ="inputs" type="text" id="name" name="name" value="Ícaro">
                 <h3>Jogador</h3>
-                <input class ="inputs" type="text" name="player" value="Kauê">
+                <input class ="inputs" type="text" id="player" name="player" value="Kauê">
                 <h3>Ocupação</h3>
-                <input class ="inputs" type="text" name="ocupation" value="Ex-militar">
+                <input class ="inputs" type="text" id="ocupation" name="ocupation" value="Ex-militar">
                 <h3>Idade</h3>
-                <input class ="inputs" type="text" name="age" value="48">
+                <input class ="inputs" type="text" id="age" name="age" value="48">
                 <h3>Gênero</h3>
                 <select class ="inputs" id="gender" name="gender">
                     <option value="male">Masculino</option>
@@ -27,15 +27,15 @@
                     <option value="other">Outro</option>
                 </select>
                 <h3>Local de nascimento</h3>
-                <input class ="inputs" type="text" name="" value="São Paulo">
+                <input class ="inputs" type="text" id="birthplace" name="birthplace" value="São Paulo">
                 <h3>Local de residência</h3>
-                <input class ="inputs" type="text" name="" value="São Paulo">
+                <input class ="inputs" type="text" id="place-residence" name="place-residence" value="São Paulo">
             </div>
         </div>
         <div class="character">
             <div class="character-header">
                 <img class="character-image" src="images/icaro.png" style="width: 30%; height: 30%;">
-                <img class="dice-image" src="images/dice.png" style="width: 20%; height: 20%;">
+                <img class="dice-image" src="images/dice.png" style="width: 15%; height: 15%;">
             </div>
 
             <div class="bars">
@@ -43,13 +43,72 @@
                 <div id="life">
                     <div id="actual-life"></div>
                 </div>
+                <div class="checkboxes">
+                    <form>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="serious-damage" value="serious-damage">
+                            <label for="serious-damage">Lesão Grave</label>
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="unconscious" value="unconscious">
+                            <label for="unconscious">Inconsciente</label>
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="dying" value="dying">
+                            <label for="dying">Morrendo</label>
+                            <span class="checkmark"></span>
+                        </div>
+                    </form>
+                </div>
                 <h3>Sanidade</h3>
-                <div id="sanity">
-                    <div id="actual-sanity"></div>
+                <div class="sanity">
+                    <div id="sanity">
+                        <div id="actual-sanity"></div>
+                    </div>
+                    <img class="dice-sanity" src="/images/dice.png" style="width: 25px; height: 25px;">
+                </div>
+                <div class="checkboxes">
+                    <form>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="traumatized" value="traumatized">
+                            <label for="traumatized">Traumatizado</label>
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="crazed" value="crazed">
+                            <label for="crazed">Enlouquecido</label>
+                            <span class="checkmark"></span>
+                        </div>
+                    </form>
                 </div>
                 <h3>Ocultismo</h3>
                 <div id="occultism">
                     <div id="actual-occultism"></div>
+                </div>
+            </div>
+
+            <div class="secundary-attributes">
+                <div class="extra-damage">
+                    <h3>Dano Extra
+                        <p>1D4</p>
+                    </h3>
+                </div>
+                <div class="body">
+                    <h3>Corpo
+                        <p>1</p>
+                    </h3>
+                </div>
+                <div class="exposure">
+                    <h3>Exposição
+                        <p>20</p1>
+                    </h3>
+                </div>
+                <div class="movimentation">
+                    <h3>Movimentação
+                        <p>7</p1>
+                    </h3>
                 </div>
             </div>
         </div>

@@ -8,11 +8,6 @@
     to {transform: rotate(360deg);}
 }
 
-@keyframes progress {
-    from {width: 1%;}
-    to {width: 100%;}
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -33,12 +28,6 @@ h1 {
 
 h3 {
     margin: 10px 0px 0px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    margin: 0px 30px;
 }
 
 input:focus {
@@ -62,11 +51,11 @@ select:focus {
 .personal-details {
     width: 40%;
     height: auto;
-    padding: 20px 20px 15px 20px;
+    padding: 20px 20px 0px 20px;
     border: 1px solid white;
     border-radius: 5px;
     font-size: 12px;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .title {
@@ -111,36 +100,143 @@ input.inputs, select.inputs {
     animation: rollDice 3s;
 }
 
+.bars h3 {
+    margin-bottom: 5px;
+}
+
 #life, #sanity, #occultism {
     width: 100%;
-    background-color: gray;
-    border: 1px solid rgb(58, 57, 57);
-    border-radius: 7px;
+    height: 25px;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 5px;
+}
+
+#life {
+    background-color: rgb(99, 33, 33);
+}
+
+#sanity {
+    background-color: rgb(28, 47, 104);
+    width: 85%;
+}
+
+#occultism {
+    background-color: rgb(73, 32, 102);
 }
 
 #actual-life {
-    width: 1%;
-    height: 20px;
-    background-color: rgb(151, 17, 17);
-    animation: progress 3s;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(80, 1, 1);
     border: 1px solid transparent;
-    border-radius: 7px;
+    border-radius: 4px;
 }
 
 #actual-sanity {
-    width: 1%;
-    height: 20px;
-    background-color: rgb(8, 8, 204);
-    animation: progress 3s;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(0, 21, 82);
     border: 1px solid transparent;
-    border-radius: 7px;
+    border-radius: 4px;
 }
 
 #actual-occultism {
-    width: 1%;
-    height: 20px;
-    background-color: rgb(65, 8, 65);
-    animation: progress 3s;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(48, 1, 81);
     border: 1px solid transparent;
-    border-radius: 7px;
+    border-radius: 4px;
+}
+
+.checkboxes {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.checkboxes div {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxes form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkboxes label {
+    font-size: 13px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkboxes input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after  {
+    display: block;
+}
+
+.checkbox-container .checkmark::after {
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.sanity {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sanity ~ .checkboxes {
+    width: 85%;
+}
+
+.secundary-attributes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.secundary-attributes h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.secundary-attributes p {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
