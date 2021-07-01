@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/dice.png">
+    <script src="script.js"></script>
     <title>Ficha do Personagem</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
         <div class="character">
             <div class="character-header">
                 <img class="character-image" src="images/icaro.png" style="width: 30%; height: 30%;">
-                <img class="dice-image dice-roll" src="images/dice.png" style="width: 15%; height: 15%;">
+                <img class="dice-image dice-roll" src="images/dice.png" style="width: 15%; height: 15%;" onclick="openModal()">
             </div>
 
             <div class="bars">
@@ -71,7 +72,7 @@
                     <div id="sanity">
                         <div id="actual-sanity"></div>
                     </div>
-                    <img class="dice-roll" src="images/dice.png" style="width: 25px; height: 25px;">
+                    <img class="dice-roll" src="images/dice.png" style="width: 25px; height: 25px;" onclick="exposureTest()">
                 </div>
                 <div class="checkboxes">
                     <form>
@@ -372,6 +373,14 @@
                     <h3>Usar Computadores</h3>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="modal" id="dice-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="test-name"></h3>
+            <p id="result-dice"></p>
+            <p id="result-text"></p>
         </div>
     </div>
 </body>
