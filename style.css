@@ -316,7 +316,7 @@ input.inputs, select.inputs {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     justify-content: space-evenly;
-    grid-gap: 50px 50px;
+    grid-gap: 50px 45px;
     overflow-y: auto;
 }
 
@@ -375,7 +375,7 @@ input.inputs, select.inputs {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 250px;
     left: 0;
     top: 0;
     width: 100%;
@@ -385,8 +385,9 @@ input.inputs, select.inputs {
 }
 
 .modal-content {
+    position: relative;
     background-color: black;
-    margin: 150px auto auto auto;
+    margin: auto;
     padding: 5px 0px 10px 0px;
     border: 1px solid white;
     border-radius: 3px;
@@ -394,22 +395,30 @@ input.inputs, select.inputs {
 }
 
 .modal-content h3 {
+    font-size: 16px;
     margin-top: 10px;
+    padding-left: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
-    text-align: center;
 }
 
-.modal-content p {
-    font-size: 26px;
+#result-dice {
+    font-size: 24px;
     text-align: center;
     margin-top: 10px;
+}
+
+#result-text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;  
 }
 
 .close {
     color: rgb(182, 182, 182);
     float: right;
-    font-size: 28px;
+    font-family: monospace;
+    font-size: 30px;
     font-weight: bold;
     margin-right: 15px;
 }
