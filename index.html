@@ -37,13 +37,15 @@
         <div class="character">
             <div class="character-header">
                 <img class="character-image" src="images/icaro.png" style="width: 30%; height: 30%;">
-                <img class="dice-image dice-roll" src="images/dice.png" style="width: 15%; height: 15%;" onclick="openModal()">
+                <img class="dice-image dice-roll" src="images/dice.png" style="width: 15%; height: 15%;" onclick="openModal('dice')">
             </div>
 
             <div class="bars">
                 <h3>Vida</h3>
-                <div id="life">
-                    <div id="actual-life"></div>
+                <div id="life-bar">
+                    <div id="actual-life-bar">
+                        <p id="life-value" onclick="changeModalValue(this)">15/15</p>
+                    </div>
                 </div>
                 <div class="checkboxes">
                     <form>
@@ -69,8 +71,10 @@
                 </div>
                 <h3>Sanidade</h3>
                 <div class="sanity">
-                    <div id="sanity">
-                        <div id="actual-sanity"></div>
+                    <div id="sanity-bar">
+                        <div id="actual-sanity-bar">
+                            <p id="sanity-value" onclick="changeModalValue(this)">65/65</p>
+                        </div>
                     </div>
                     <img class="dice-roll" src="images/dice.png" style="width: 25px; height: 25px;" onclick="exposureTest()">
                 </div>
@@ -91,8 +95,10 @@
                     </form>
                 </div>
                 <h3>Ocultismo</h3>
-                <div id="occultism">
-                    <div id="actual-occultism"></div>
+                <div id="occultism-bar">
+                    <div id="actual-occultism-bar">
+                        <p id="occultism-value" onclick="changeModalValue(this)">10/10</p>
+                    </div>
                 </div>
             </div>
 
@@ -377,10 +383,23 @@
     </div>
     <div class="modal" id="dice-modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal('dice')">&times;</span>
             <h3 id="test-name"></h3>
             <p id="result-dice"></p>
             <p id="result-text"></p>
+        </div>
+    </div>
+    <div class="modal" id="value-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('value')">&times;</span>
+            <h3 id="value-title"></h3>
+            <div class="div-values">
+                <h3 class="values-types-title">Atuais</h3>
+                <input type="number" id="actual-value" value="0">
+                <h3 class="values-types-title">Máximos</h3>
+                <input type="number" id="maximum-value" value="0">
+                <button onclick="changeValue()">Salvar</button>
+            </div>
         </div>
     </div>
 </body>
